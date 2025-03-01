@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="poppins">
+<body class="poppins bg-purple-100">
     <header class="md:container mx-auto">
         <nav>
             <div class="navbar bg-base-100 shadow-sm">
@@ -46,9 +46,9 @@
             </div>
         </nav>
     </header>
-    <main class="md:container mx-auto my-4 bg-gray-400 p-2">
+    <main class="md:container mx-auto my-4 p-2">
         <!-- full layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 rounded-md">
+        <div class="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-4 rounded-md">
             <!-- left site  -->
             <div class="bg-white rounded-md">
                 <!-- left site upper container-->
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <!-- card--2 -->
-                    <div class="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-400 rounded-md p-3">
+                    <div id="question-page" class="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-400 rounded-md p-3">
                         <div>
                             <img src="./assets/board.png" alt="">
                         </div>
@@ -77,7 +77,7 @@
                         <div class="bg-white rounded-full p-2">
                             <img src="./assets/calender.png" alt="">
                         </div>
-                        <div>
+                        <div id="new-date">
                             <p> Wed , <br>
                                 <span class="font-bold">Jul 28 2025</span>
                             </p>
@@ -89,89 +89,107 @@
                 <div class="border-t-2 border-dashed border-gray-400 bg-white rounded-b p-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <!-- card--1 -->
-                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
-                            <p class=" w-20 text-center h-8 rounded p-1 bg-white">ShopEase</p>
+                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4 w-xs">
+                            <p class="btn bg-white">ShopEase</p>
                             <h2 class="text-xl font-semibold">Fix Mobile Button Issue </h2>
-                            <p class="p-2 bg-white rounded text-sm text-gray-600">Debug using Chrome DevTools, check for
-                                overlapping elements,
+                            <p class="p-2 bg-white rounded text-xs text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                                 and ensure onClick works properly</p>
-                            <div class="flex items-center justify-between  border-t-2 border-dashed border-gray-400">
-                                <p class="text-sm text-gray-600 mt-4">Deadline <br>
+                            <div class="flex items-center justify-between border-dashed border-gray-400 mt-10">
+                               <div>
+                                <p class="text-sm text-gray-600">Deadline <br>
                                     <span class="text-black font-semibold">21 March 2025</span>
                                 </p>
-                                <button class="btn btn-primary btn-completed">Completed</button>
+                               </div>
+                                <div>
+                                    <button class="btn bg-blue-600 text-white btn-completed">Completed</button>
+                                </div>
                             </div>
                         </div>
                         <!-- card--2 -->
-                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
-                            <p class=" w-20 text-center h-8 rounded p-1 bg-white">CloudSync</p>
+                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4 w-xs">
+                            <p class="btn bg-white">CloudSync</p>
                             <h2 class="text-xl font-semibold">Add Dark Mode </h2>
-                            <p class=" p-2 bg-white rounded text-sm text-gray-600">Debug using Chrome DevTools, check
-                                for overlapping elements,
-                                and ensure onClick works properly</p>
-                            <div class="flex items-center justify-between  border-t-2 border-dashed border-gray-400">
-                                <p class="text-sm text-gray-600 mt-4">Deadline <br>
+                            <p class="p-2 bg-white rounded text-xs text-gray-700">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                            <div class="flex items-center justify-between border-dashed border-gray-400 mt-10">
+                               <div>
+                                <p class="text-sm text-gray-600">Deadline <br>
                                     <span class="text-black font-semibold">21 March 2025</span>
                                 </p>
-                                <button class="btn btn-primary btn-completed">Completed</button>
+                               </div>
+                                <div>
+                                    <button class="btn bg-blue-600 text-white btn-completed">Completed</button>
+                                </div>
                             </div>
                         </div>
                         <!-- card--3 -->
-                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
-                            <p class=" w-20 text-center h-8 rounded p-1 bg-white">SwiftPay</p>
-                            <h2 class="text-xl font-semibold">Optimize Home page </h2>
-                            <p class=" p-2 bg-white rounded text-sm text-gray-600">Debug using Chrome DevTools, check
-                                for overlapping elements,
+                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4 w-xs">
+                            <p class="btn bg-white">SwiftPay</p>
+                            <h2 class="text-xl font-semibold">Optimize  Home page  </h2>
+                            <p class="p-2 bg-white rounded text-xs text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                                 and ensure onClick works properly</p>
-                            <div class="flex items-center justify-between  border-t-2 border-dashed border-gray-400">
-                                <p class="text-sm text-gray-600 mt-4">Deadline <br>
+                            <div class="flex items-center justify-between border-dashed border-gray-400 mt-10">
+                               <div>
+                                <p class="text-sm text-gray-600">Deadline <br>
                                     <span class="text-black font-semibold">21 March 2025</span>
                                 </p>
-                                <button class="btn btn-primary btn-completed">Completed</button>
+                               </div>
+                                <div>
+                                    <button class="btn bg-blue-600 text-white btn-completed">Completed</button>
+                                </div>
                             </div>
                         </div>
                         <!-- card--4 -->
-                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
-                            <p class=" w-20 text-center h-8 rounded p-1 bg-white">Meta</p>
-                            <h2 class="text-xl font-semibold">Add new emoji 🤲 </h2>
-                            <p class="p-2 bg-white rounded text-sm text-gray-600">Debug using Chrome DevTools, check for
-                                overlapping elements,
+                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4 w-xs">
+                            <p class="btn bg-white">Meta</p>
+                            <h2 class="text-xl font-semibold">Add new emoji 🤲  </h2>
+                            <p class="p-2 bg-white rounded text-xs text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                                 and ensure onClick works properly</p>
-                            <div class="flex items-center justify-between  border-t-2 border-dashed border-gray-400">
-                                <p class="text-sm text-gray-600 mt-4">Deadline <br>
+                            <div class="flex items-center justify-between border-dashed border-gray-400 mt-10">
+                               <div>
+                                <p class="text-sm text-gray-600">Deadline <br>
                                     <span class="text-black font-semibold">21 March 2025</span>
                                 </p>
-                                <button class="btn btn-primary btn-completed">Completed</button>
+                               </div>
+                                <div>
+                                    <button class="btn bg-blue-600 text-white btn-completed">Completed</button>
+                                </div>
                             </div>
                         </div>
                         <!-- card--5 -->
-                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
-                            <p class=" w-28 text-center h-8 rounded p-1 bg-white">SGoogle LLC</p>
-                            <h2 class="text-xl font-semibold">Integrate OpenAI API </h2>
-                            <p class="p-2 bg-white rounded text-sm text-gray-600">Debug using Chrome DevTools, check for
-                                overlapping elements,
+                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4 w-xs">
+                            <p class="btn bg-white">Google LLC</p>
+                            <h2 class="text-xl font-semibold">Integrate OpenAI API  </h2>
+                            <p class="p-2 bg-white rounded text-xs text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                                 and ensure onClick works properly</p>
-                            <div class="flex items-center justify-between  border-t-2 border-dashed border-gray-400">
-                                <p class="text-sm text-gray-600 mt-4">Deadline <br>
+                            <div class="flex items-center justify-between border-dashed border-gray-400 mt-10">
+                               <div>
+                                <p class="text-sm text-gray-600">Deadline <br>
                                     <span class="text-black font-semibold">21 March 2025</span>
                                 </p>
-                                <button class="btn btn-primary btn-completed">Completed</button>
+                               </div>
+                                <div>
+                                    <button class="btn bg-blue-600 text-white btn-completed">Completed</button>
+                                </div>
                             </div>
                         </div>
                         <!-- card--6 -->
-                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4">
-                            <p class=" w-20 text-center h-8 rounded p-1 bg-white">Glassdoar</p>
-                            <h2 class="text-xl font-semibold">Improve Job searching </h2>
-                            <p class=" p-2 bg-white rounded text-sm text-gray-600">Debug using Chrome DevTools, check
-                                for overlapping elements,
+                        <div class="bg-[#f4f7ff] rounded p-4 space-y-4 w-xs">
+                            <p class="btn bg-white">Glassdoar</p>
+                            <h2 class="text-xl font-semibold">Improve Job searching  </h2>
+                            <p class="p-2 bg-white rounded text-xs text-gray-700">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                                 and ensure onClick works properly</p>
-                            <div class="flex items-center justify-between border-t-2 border-dashed border-gray-400">
-                                <p class="text-sm text-gray-600 mt-4">Deadline <br>
+                            <div class="flex items-center justify-between border-dashed border-gray-400 mt-10">
+                               <div>
+                                <p class="text-sm text-gray-600">Deadline <br>
                                     <span class="text-black font-semibold">21 March 2025</span>
                                 </p>
-                                <button class="btn btn-primary btn-completed">Completed</button>
+                               </div>
+                                <div>
+                                    <button class="btn bg-blue-600 text-white btn-completed">Completed</button>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -193,16 +211,16 @@
     </main>
 
     <script>
-        document.getElementById('bg-color-btn')
-        .addEventListener('click', function(event){
-            let r = Math.floor(Math.random() * 256);
-            let g = Math.floor(Math.random() * 256);
-            let b = Math.floor(Math.random() * 256);
-            let bgColor = "rgb(" + r + "," + g + "," + b + ")";
-            // console.log(bgColor)
-            document.body.style.background = bgColor;
+           const buttons = document.querySelectorAll('.btn-completed');
+            
+        buttons.forEach(button =>{
+            button.addEventListener('click', function(){
+                alert('board updated succesfull')
+            })
         })
+
     </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
