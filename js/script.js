@@ -52,60 +52,65 @@ document.getElementById('new-date').innerText=
 
 
         // kdjkdj
-    // const completedButtons = document.querySelectorAll('.btn-completed'); 
-    // const taskCountElement = document.getElementById('task-assigned'); 
-    // const navbarCountElement = document.querySelector('.bg-blue-600'); 
-    // const activityLogContainer = document.getElementById('activityLogContainer'); 
-    // const clearHistoryButton = document.getElementById('clear-history-btn'); 
+// const completedButtons = document.querySelectorAll('.btn-completed'); 
+// const taskCountElement = document.getElementById('task-assigned'); 
+// const navbarCountElement = document.querySelector('#count'); 
+// const activityLogContainer = document.getElementById('activityLogContainer'); 
+// const clearHistoryButton = document.getElementById('clear-history-btn'); 
 
-    // completedButtons.forEach(button => {
-    //     button.addEventListener('click', function() {
+//     completedButtons.forEach(button => {
+//         button.addEventListener('click', function() {
             
-    //         const taskName = button.parentElement.parentElement.querySelector('h2').textContent;
-    // const confirmCompletion = confirm(`Are you sure you want to mark "${taskName}" as completed?`);
-
-            
-    //         if (confirmCompletion) {
-                
-    //             button.disabled = true;
-
-                
-    //             let taskCount = parseInt(taskCountElement.textContent);
-    //             taskCountElement.textContent = taskCount - 1;
-
-                
-    //             let navbarCount = parseInt(navbarCountElement.textContent.trim());
-    //             navbarCountElement.textContent = ` ${navbarCount + 1} `;
-
-                
-    //             const now = new Date();
-    //             const timeString = now.toLocaleTimeString();
-    //             const logEntry = document.createElement('p');
-    //             logEntry.textContent = `You have completed the task "${taskName}" at ${timeString}`
-                
-                
-    //             activityLogContainer.appendChild(logEntry);
-    //         }
-    //     });
-    // });
+//     const taskName = button.parentElement.parentElement.querySelector('h2').textContent;
+//     const confirmCompletion = confirm(`Are you sure you want to mark "${taskName}" as completed?`);
 
     
-    // clearHistoryButton.addEventListener('click', function() {
+            
+//             if (confirmCompletion) {
+                
+//                 button.disabled = true;
+
+                
+//                 let taskCount = parseInt(taskCountElement.textContent);
+//                 taskCountElement.textContent = taskCount - 1;
+
+                
+//                 let navbarCount = parseInt(navbarCountElement.textContent.trim());
+//                 navbarCountElement.textContent = ` ${navbarCount + 1} `;
+
+                
+//                 const now = new Date();
+//                 const timeString = now.toLocaleTimeString();
+//                 const logEntry = document.createElement('p');
+//                 logEntry.textContent = `You have completed the task "${taskName}" at ${timeString}`
+                
+                
+//                 activityLogContainer.appendChild(logEntry);
+//             }
+//         });
+//     });
+
+    
+//     clearHistoryButton.addEventListener('click', function() {
         
-    //     activityLogContainer.innerHTML = '';
-    // });
+//         activityLogContainer.innerHTML = '';
+//     });
+
 const completedButtons = document.querySelectorAll('.btn-completed'); 
-const taskCountElement = document.getElementById('task assigned'); 
+const taskCountElement = document.getElementById('task-assigned'); 
 const navbarCountElement = document.querySelector('#count'); 
 const activityLogContainer = document.getElementById('activityLogContainer'); 
-const clearHistoryButton = document.querySelector('#clear-history-btn'); 
+const clearHistoryButton = document.querySelector('#clear-history-btn');
+let completeTaskCount = 0;
+const totalTask = completedButtons.length;
 
 completedButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const taskTitleElement = button.closest('.task-item')?.querySelector('#task-title-name');
-        const taskName = taskTitleElement ? taskTitleElement.textContent : 'this task';
+    button.addEventListener('click', function(event) {
         
-        const confirmCompletion = confirm(`Board Updated succesfully "${taskName}" completed?`);
+        const titleEliment = event.target.parentNode.parentNode.parentNode.querySelector('.title');
+        const taskName = titleEliment.innerText;
+        
+        const confirmCompletion = confirm(`Board Updated Successfully`);
 
         if (confirmCompletion) {
             button.disabled = true;
@@ -123,10 +128,16 @@ completedButtons.forEach(button => {
             const now = new Date();
             const timeString = now.toLocaleTimeString();
             const logEntry = document.createElement('p');
+            logEntry.classList.add('p-4', 'rounded-lg', 'border-green-500', 'shadow-lg', 'bg-blue-100', 'mb-2', 'text-md', 'font-semibold');
             logEntry.textContent = `You have completed the task "${taskName}" at ${timeString}
             `;
             activityLogContainer.appendChild(logEntry);
+            completeTaskCount++;
+            if(completeTaskCount === totalTask){
+                alert('Congrats! You have completed all tasks!');
+            }
         }
+        
     });
 });
 
@@ -135,6 +146,4 @@ if (clearHistoryButton) {
         activityLogContainer.innerHTML = '';
     });
 }
- 
-
 
